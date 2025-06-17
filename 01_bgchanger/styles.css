@@ -1,0 +1,28 @@
+body{
+    background-color: #313131;
+    color: aliceblue;
+}
+
+.box{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    color: black;
+    border: 10px solid #0079f1;
+    padding: 20px;
+    display: inline-block;
+    
+    
+    align-items: center;
+    justify-content: center;
+
+}
+#some{
+    align-items: center;
+    padding: 10 px;
+}
+#some {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
