@@ -86,7 +86,7 @@ function displayWinner(currentPlayer) {
     } else {
         winner.innerHTML = "O wins";
     }
-    // gameOver = true; // 🔥 Stop the game
+    gameOver = true; // 🔥 Stop the game
 }
 
 function checkIfWin(currentPlayer) {
