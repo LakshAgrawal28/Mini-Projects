@@ -1,10 +1,14 @@
-document.querySelector("#myButton").addEventListener("click", (e) => {
-    document.body.style.backgroundColor = "#fff";
+document.getElementById("themeLight").addEventListener("click", () => {
+  document.body.style.backgroundColor = "#fefae0"
+  document.body.style.color = "#333"
 })
-document.querySelector("#myButton2").addEventListener("click", (e) => {
-    document.body.style.backgroundColor = "#212121";
-    
+
+document.getElementById("themeDark").addEventListener("click", () => {
+  document.body.style.backgroundColor = "#1a1a2e"
+  document.body.style.color = "#e0e0e0"
 })
-document.querySelector("#myButton3").addEventListener("click", (e) => {
-    document.body.style.backgroundColor = "#123AAA";
+
+document.getElementById("themeOcean").addEventListener("click", () => {
+  document.body.style.backgroundColor = "#0077b6"
+  document.body.style.color = "#ffffff"
 })
