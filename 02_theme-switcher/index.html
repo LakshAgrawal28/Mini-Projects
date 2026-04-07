@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <main class="app">
+    <div class="hero">
+      <p class="eyebrow">02 Mini Project</p>
+      <h1>Theme Switcher</h1>
+      <p class="subtitle">Pick a theme and instantly restyle the page.</p>
+    </div>
+
+    <section class="panel">
+      <div class="theme-grid">
+        <button class="theme-card active" data-theme="light">
+          <span class="theme-name">Light</span>
+          <span class="theme-preview light-preview"></span>
+        </button>
+        <button class="theme-card" data-theme="dark">
+          <span class="theme-name">Dark</span>
+          <span class="theme-preview dark-preview"></span>
+        </button>
+        <button class="theme-card" data-theme="ocean">
+          <span class="theme-name">Ocean</span>
+          <span class="theme-preview ocean-preview"></span>
+        </button>
+      </div>
+      <p id="themeLabel" class="theme-label">Current theme: Dark</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

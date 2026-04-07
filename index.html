@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Projects Journey | Laksh Agrawal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <nav class="navbar-wrapper">
+    <div class="navbar glass">
+      <div class="nav-container">
+        <a class="brand" href="#home">LA / <span class="accent">Mini</span></a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Archive</a>
+          <a href="#footer">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="https://github.com/LakshAgrawal28" target="_blank" class="nav-btn" title="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a href="https://linkedin.com/in/laksh-agrawal-873598324" target="_blank" class="nav-btn" title="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section id="home" class="hero centered-hero">
+      <div class="hero-bg-elements">
+        <div class="hero-blob"></div>
+        <div class="hero-grid-pattern"></div>
+      </div>
+
+      <div class="hero-content reveal">
+        <h1 class="gradient-text">The Evolution of <br><span class="highlight">Laksh Agrawal</span></h1>
+        <p class="hero-text">
+          A progression from fundamental DOM logic to complex architectural patterns like <strong>Leviosa</strong> and
+          <strong>Consilium</strong>.
+          Each project represents a distinct milestone in engineering and performance.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">
+            Archive Explorer
+          </a>
+          <a class="button button-glass" href="https://leviosa-by-laksh.vercel.app/" target="_blank">
+            <ion-icon name="rocket-outline"></ion-icon> Major Project
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stats-row reveal fade-in-up">
+        <div class="mini-stat-card glass">
+          <span class="mini-stat-label">LeetCode</span>
+          <span class="mini-stat-value">300+</span>
+        </div>
+        <div class="mini-stat-card glass featured-stat">
+          <span class="mini-stat-label">CGPA</span>
+          <span class="mini-stat-value">8.78</span>
+        </div>
+        <div class="mini-stat-card glass">
+          <span class="mini-stat-label">JEE AIR</span>
+          <span class="mini-stat-value">7417</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="split-transition reveal">
+      <div class="split-card glass">
+        <div class="split-content">
+          <ion-icon name="layers-outline"></ion-icon>
+          <h3>Technical Archive</h3>
+          <p>A chronological timeline of my development journey, from individual components to full-scale web
+            applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="projects" class="container timeline-container">
+      <div class="section-header reveal">
+        <h2 class="gradient-text">Learning Archive</h2>
+        <p class="section-text">A structured progression of 12 mini-apps built alongside major university projects.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Level 01 -->
+        <div class="level-group reveal">
+          <div class="level-indicator">
+            <div class="level-dot"></div>
+            <div class="level-line"></div>
+          </div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-badge">Phase 01</span>
+              <h3>The Foundations</h3>
+              <p>Immediate feedback, event listeners, and simple state changes.</p>
+            </div>
+
+            <div class="project-grid">
+              <a href="./01_counter-app/index.html" class="project-card glass hover-lift">
+                <div class="project-meta">
+                  <span class="project-num">01</span>
+                </div>
+                <div class="project-icon"><ion-icon name="add-circle-outline"></ion-icon></div>
+                <h4>Counter App</h4>
+                <p>Numeric state handling with additive logic.</p>
+              </a>
+
+              <a href="./02_theme-switcher/index.html" class="project-card glass hover-lift">
+                <div class="project-meta">
+                  <span class="project-num">02</span>
+                </div>
+                <div class="project-icon"><ion-icon name="color-palette-outline"></ion-icon></div>
+                <h4>Theme Switcher</h4>
+                <p>CSS variable manipulation and DOM styles.</p>
+              </a>
+
+              <a href="./03_digital-clock/index.html" class="project-card glass hover-lift">
+                <div class="project-meta">
+                  <span class="project-num">03</span>
+                </div>
+                <div class="project-icon"><ion-icon name="time-outline"></ion-icon></div>
+                <h4>Digital Clock</h4>
+                <p>SetInterval loops and Date object parsing.</p>
+              </a>
+
+              <a href="./04_color-picker/index.html" class="project-card glass hover-lift">
+                <div class="project-meta">
+                  <span class="project-num">04</span>
+                </div>
+                <div class="project-icon"><ion-icon name="aperture-outline"></ion-icon></div>
+                <h4>Color Picker</h4>
+                <p>Hex conversions and dynamic background updates.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 02 -->
+        <div class="level-group reveal">
+          <div class="level-indicator">
+            <div class="level-dot"></div>
+            <div class="level-line"></div>
+          </div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-badge">Phase 02</span>
+              <h3>Core Logic & Data</h3>
+              <p>Array handling, local storage, API fetching and math logic.</p>
+            </div>
+
+            <div class="project-grid">
+              <a href="./05_quote-generator/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">05</span></div>
+                <div class="project-icon"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
+                <h4>Quote Generator</h4>
+                <p>Randomized data pulling and string rendering.</p>
+              </a>
+
+              <a href="./06_todo-list/index.html" class="project-card glass hover-lift featured-card">
+                <div class="project-meta"><span class="project-num">06</span></div>
+                <div class="project-icon"><ion-icon name="checkbox-outline"></ion-icon></div>
+                <h4>To-Do App</h4>
+                <p>Full CRUD operations and LocalStorage data persistence.</p>
+              </a>
+
+              <a href="./07_calculator/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">07</span></div>
+                <div class="project-icon"><ion-icon name="calculator-outline"></ion-icon></div>
+                <h4>Calculator</h4>
+                <p>Complex expression evaluation and layout grids.</p>
+              </a>
+
+              <a href="./08_password-generator/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">08</span></div>
+                <div class="project-icon"><ion-icon name="key-outline"></ion-icon></div>
+                <h4>Pass Generator</h4>
+                <p>Algorithm-based randomized string creation.</p>
+              </a>
+
+              <a href="./09_weather-app/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">09</span></div>
+                <div class="project-icon"><ion-icon name="partly-sunny-outline"></ion-icon></div>
+                <h4>Weather App</h4>
+                <p>RESTful API fetching and async/await data handling.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Level 03 -->
+        <div class="level-group reveal">
+          <div class="level-indicator">
+            <div class="level-dot pulse-dot"></div>
+          </div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-badge">Phase 03</span>
+              <h3>Advanced Applications</h3>
+              <p>Complex game logic, state machines, and multi-step UI flows.</p>
+            </div>
+
+            <div class="project-grid">
+              <a href="./10_image-slider/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">10</span></div>
+                <div class="project-icon"><ion-icon name="images-outline"></ion-icon></div>
+                <h4>Image Slider</h4>
+                <p>Carousel logic, infinite looping, and image preloading.</p>
+              </a>
+
+              <a href="./11_quiz-app/index.html" class="project-card glass hover-lift">
+                <div class="project-meta"><span class="project-num">11</span></div>
+                <div class="project-icon"><ion-icon name="school-outline"></ion-icon></div>
+                <h4>Quiz Builder</h4>
+                <p>Multi-step flows, score tracking, and visual feedback.</p>
+              </a>
+
+              <a href="./12_tic-tac-toe/index.html" class="project-card glass hover-lift master-card">
+                <div class="card-glow"></div>
+                <div class="project-meta"><span class="project-num">12</span> <span class="badge-mini">Capstone</span>
+                </div>
+                <div class="project-icon"><ion-icon name="game-controller-outline"></ion-icon></div>
+                <h4>Tic Tac Toe</h4>
+                <p>Combinatorics, victory conditions, and complete game loop architecture.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </section>
+  </main>
+
+  <footer id="footer" class="footer reveal glass">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h2>Laksh<br />Agrawal</h2>
+        <p>CSE & AI Student at NSUT. Building high-performance web experiences.</p>
+        <div class="social-links">
+          <a href="https://github.com/LakshAgrawal28" target="_blank" class="social-icon"><ion-icon
+              name="logo-github"></ion-icon></a>
+          <a href="https://linkedin.com/in/laksh-agrawal-873598324" target="_blank" class="social-icon"><ion-icon
+              name="logo-linkedin"></ion-icon></a>
+          <a href="https://leetcode.com/LakshAgrawal" target="_blank" class="social-icon"><ion-icon
+              name="code-working-outline"></ion-icon></a>
+        </div>
+      </div>
+      <div class="footer-links-grid">
+        <div class="footer-list">
+          <h4>Featured Work</h4>
+          <a href="https://leviosa-by-laksh.vercel.app/" target="_blank">Leviosa 3D</a>
+          <a href="https://consilium.fesnsut.com" target="_blank">Consilium Site</a>
+        </div>
+        <div class="footer-list">
+          <h4>Academic</h4>
+          <a href="#">9.0 CGPA</a>
+          <a href="#">FrostHack Finalist</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Laksh Agrawal. Crafted meticulously.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
