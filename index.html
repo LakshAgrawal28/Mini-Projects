@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="style.css">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    // Initialize theme immediately to prevent flashing
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
 </head>
 
 <body>
@@ -31,6 +38,10 @@
           <a href="#footer">Contact</a>
         </div>
         <div class="nav-actions">
+          <button id="theme-toggle" class="nav-btn theme-btn" title="Toggle Theme">
+            <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+            <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+          </button>
           <a href="https://github.com/LakshAgrawal28" target="_blank" class="nav-btn" title="GitHub">
             <ion-icon name="logo-github"></ion-icon>
           </a>

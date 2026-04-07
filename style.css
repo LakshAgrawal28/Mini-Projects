@@ -24,6 +24,26 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+[data-theme='light'] {
+  --bg-color: #f8f9fa;
+  --bg-gradient: radial-gradient(circle at 15% 50%, rgba(38, 22, 107, 0.05) 0%, rgba(0, 0, 0, 0) 50%),
+                 radial-gradient(circle at 85% 30%, rgba(26, 88, 153, 0.05) 0%, rgba(0, 0, 0, 0) 40%);
+  
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-hover: rgba(255, 255, 255, 0.9);
+  --glass-border-hover: rgba(96, 165, 250, 0.5);
+
+  --text-main: #030305;
+  --text-muted: #4b5563;
+  
+  --accent-color: #2563eb;
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.2);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -167,6 +187,11 @@ p { color: var(--text-muted); }
 }
 .nav-btn:hover { transform: scale(1.1) rotate(5deg); }
 
+/* Theme Toggle Icons */
+.theme-btn .sun-icon { display: none; }
+[data-theme='light'] .theme-btn .sun-icon { display: block; }
+[data-theme='light'] .theme-btn .moon-icon { display: none; }
+
 /* Main Layout */
 #main-content { 
   max-width: 1200px; 
@@ -306,6 +331,62 @@ p { color: var(--text-muted); }
   border-radius: 50%;
   box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
   opacity: 0.8;
+}
+
+/* Technical Archive (Split Transition) */
+.split-transition {
+  margin: 4rem auto;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.split-card {
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.split-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.1), transparent 70%);
+  z-index: -1;
+}
+
+.split-content ion-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.5));
+  animation: iconPulse 4s infinite ease-in-out;
+}
+
+.split-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.split-content p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.split-card:hover {
+  border-color: var(--glass-border-hover);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
 }
 
 /* New Stat Cards */
