@@ -75,12 +75,14 @@ h1, h2, h3, h4 {
 }
 
 .gradient-text {
-  color: var(--text-main); /* Default visible color */
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--text-main);
+  display: table; /* Most stable for centering background-clip text */
+  margin: 0 auto;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  line-height: 1.25;
+  overflow: visible;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 @supports (-webkit-background-clip: text) or (background-clip: text) {
@@ -119,9 +121,17 @@ p { color: var(--text-muted); }
 .navbar {
   pointer-events: auto;
   border-radius: 100px;
-  padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+  padding: 0.4rem 0.6rem 0.4rem 1.5rem; /* Balanced padding */
   width: auto;
-  min-width: 400px;
+  min-width: 420px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(96, 165, 250, 0.1);
 }
 
 .nav-container {
@@ -173,8 +183,8 @@ p { color: var(--text-muted); }
   justify-content: center;
   text-align: center;
   min-height: 100vh;
-  padding: 10rem 0 4rem; /* Increased top padding to avoid navbar overlap */
-  overflow: visible; /* Prevent clipping of large text */
+  padding: 10rem 1rem 4rem; /* Safe horizontal padding */
+  overflow: visible;
 }
 
 .hero-bg-elements {
@@ -218,6 +228,15 @@ p { color: var(--text-muted); }
 .highlight {
   position: relative;
   display: inline-block;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--text-main);
+  filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.3));
+  padding: 0.1em 0.05em; /* Critical for descenders like 'g' */
+  line-height: inherit;
+  overflow: visible;
 }
 
 .hero-text { 
@@ -225,6 +244,7 @@ p { color: var(--text-muted); }
   max-width: 650px; 
   margin: 0 auto 3rem; 
   color: var(--text-muted);
+  line-height: 1.8;
 }
 
 /* Buttons */
@@ -270,7 +290,7 @@ p { color: var(--text-muted); }
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border-color), transparent);
-  margin: 4rem 0;
+  margin: 6rem 0;
   position: relative;
 }
 
@@ -280,11 +300,12 @@ p { color: var(--text-muted); }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: var(--primary);
   border-radius: 50%;
-  box-shadow: 0 0 15px var(--primary);
+  box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+  opacity: 0.8;
 }
 
 /* New Stat Cards */
@@ -293,25 +314,23 @@ p { color: var(--text-muted); }
   justify-content: center;
   gap: 2rem;
   margin-top: 4rem;
-  padding: 0 2rem;
+  padding: 0 1rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .mini-stat-card {
   padding: 1.25rem 2.5rem;
   border-radius: 1.5rem;
   text-align: center;
-  min-width: 160px;
+  min-width: 180px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-}
-
-.mini-stat-card.featured-stat {
-  border: 1px solid var(--primary-glow);
-  background: rgba(96, 165, 250, 0.05);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
 .mini-stat-card:hover {
@@ -368,7 +387,7 @@ p { color: var(--text-muted); }
   background: linear-gradient(180deg, var(--accent-color) 0%, var(--glass-border) 10%, var(--glass-border) 90%, transparent 100%);
 }
 
-.level-group { position: relative; margin-bottom: 5rem; }
+.level-group { position: relative; margin-bottom: 8rem; }
 .level-group:last-child { margin-bottom: 0; }
 
 .level-indicator { position: absolute; left: -2rem; top: 0; align-items: center; display: flex; transform: translateX(-50%); }
@@ -410,7 +429,12 @@ p { color: var(--text-muted); }
 .project-icon { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1.5rem; transition: var(--transition-smooth); }
 .project-card:hover .project-icon { color: var(--accent-color); transform: scale(1.1); transform-origin: left; }
 
-.project-card h4 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--text-main); }
+.project-card h4 { 
+  font-size: 1.4rem; 
+  margin-bottom: 0.5rem; 
+  color: var(--text-main);
+  padding-bottom: 0.2em; /* Fix descender clipping in card titles */
+}
 .project-card p { font-size: 0.95rem; line-height: 1.5; }
 
 .master-card { border-color: rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.05); }
